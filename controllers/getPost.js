@@ -1,7 +1,7 @@
-import { deletePost, getPost } from "../services/postService.js";
+import { getPost } from "../services/postService.js";
 
 export default async ({
-  params, 
+  params,
   response
 }) => {
   const postId = params.id;
@@ -18,6 +18,5 @@ export default async ({
     response.body = { msg: "Post with ID ${postId} not found :(" }
   }
 
-  await deletePost(postId);
-  response.body = { msg: "Post deleted :)" }
-};
+  response.body = foundPost;
+}

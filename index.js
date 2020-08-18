@@ -2,7 +2,7 @@
   Deno doesn't support node modules so we need an express equivalent.
   In this case we are using Oak, https://github.com/oakserver/oak
 */
-import { Application } from "https://deno.land/x/oak/mod.ts";
+import { Application } from "https://deno.land/x/oak@v4.0.0/mod.ts";
 import { APP_HOST, APP_PORT } from "./config.js";
 import router from "./routes.js";
 import _404 from "./controllers/404.js";
