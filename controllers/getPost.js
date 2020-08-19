@@ -4,8 +4,9 @@ export default async ({
   params,
   response
 }) => {
+  console.log("Handling getPost ...")
   const postId = params.id;
-
+  
   if(!postId) {
     response.status = 400;
     response.body=  { msg: "Invalid post id :(" };

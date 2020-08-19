@@ -3,7 +3,7 @@ import client from "../db/database.js";
 class PostRepo {
 
   selectById(id) {
-    return client.query("SELECT * FROM posts WHERE id = $1", id)
+    return client.query(`SELECT * FROM posts WHERE id = $1`, id)
   }
 
   selectAll() {
@@ -12,7 +12,7 @@ class PostRepo {
 
   create(post) {
     return client.query(
-      "INSERT INTO posts (title, content, time) VALUES ($1, $2, $3)",
+      "INSERT INTO posts (title, content, time_stamp) VALUES ($1, $2, $3)",
       post.title,
       post.content,
       post.time
@@ -28,7 +28,7 @@ class PostRepo {
 
   update(id, post) {
     var latestPost = this.selectById(id);
-    var query = "UPDATE posts SET title = $1, content = $2, time = $3 WHERE id = $4";
+    var query = "UPDATE posts SET title = $1, content = $2, time_stamp = $3 WHERE id = $4";
 
     return client.query(
       query,

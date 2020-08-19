@@ -5,6 +5,7 @@ export default async ({
   request,
   response
 }) => {
+  console.log("Handling updatePost ...")
   const postId = params.id;
 
   if(!postId) {

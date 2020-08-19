@@ -4,6 +4,7 @@ export default async ({
   params, 
   response
 }) => {
+  console.log("Handling deletePost ...")
   const postId = params.id;
 
   if(!postId) {

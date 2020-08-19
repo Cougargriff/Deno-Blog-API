@@ -20,12 +20,12 @@ export const getPosts = async () => {
 };
 
 export const getPost = async postId => {
-  const post = await postRepo.selectById(postId);
+  const posts = await postRepo.selectById(postId);
 
   var obj = {};
-  post.rows.map(post => {
+  posts.rows.map(post => {
     /* should be only one row returned ... */
-    post.rowDescription.columns.map( (el, i) => {
+    posts.rowDescription.columns.map( (el, i) => {
       obj[el.name] = post[i]
     });
   });
