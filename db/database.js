@@ -6,7 +6,8 @@ import {
   DB_NAME,
   DB_HOST,
   DB_PORT,
-  DB_USER
+  DB_USER,
+  DB_URL
 } from "../config.js";
 
 class Database {
@@ -20,13 +21,14 @@ class Database {
   }
 
   async connect() {
-    this.client = new Client({
-      user: DB_USER,
-      database: DB_NAME,
-      hostname: DB_HOST,
-      password: PSW,
-      port: DB_PORT
-    })
+    this.client = new Client(
+      !DB_URL ? {
+        user: DB_USER,
+        database: DB_NAME,
+        hostname: DB_HOST,
+        password: PSW,
+        port: DB_PORT
+      } : DB_URL)
     
     await this.client.connect()
   }
