@@ -38,4 +38,4 @@ over the data, etc.
 - [x] Handle post request for creating posts
 - [x] Handle get request for posts
 - [x] Handle delete request for post
-- [ ] Handle put request for updating post
+- [x] Handle put request for updating post
