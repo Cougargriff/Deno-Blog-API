@@ -15,6 +15,7 @@ class Database {
     this.connect();
     console.log("DB_PORT ", DB_PORT)
     console.log('DB_HOST',  DB_HOST)
+    console.log("DB_URL ", DB_URL)
     console.log("DB_USER ", DB_USER)
     console.log("DB_NAME ", DB_NAME)
     console.log("PSW", PSW)
