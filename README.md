@@ -39,4 +39,4 @@ over the data, etc.
 - [x] Handle get request for posts
 - [x] Handle delete request for post
 - [x] Handle put request for updating post
-- [ ] Deploy it!
+- [x] Deploy it!
