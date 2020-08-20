@@ -1,0 +1,10 @@
+CREATE TABLE public.posts
+(
+    id integer NOT NULL DEFAULT nextval('posts_id_seq'::regclass),
+    title character varying COLLATE pg_catalog."default",
+    content character varying COLLATE pg_catalog."default",
+    time_stamp timestamp without time zone,
+    CONSTRAINT posts_pkey PRIMARY KEY (id)
+)
+
+
