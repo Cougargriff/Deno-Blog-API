@@ -9,4 +9,4 @@ export const DB_NAME = env.DB_NAME || undefined
 export const DB_PORT = parseInt(env.DB_PORT) || undefined
 export const DB_USER = env.DB_USER || undefined
 export const DB_HOST = env.DB_HOST || undefined
-export const DB_URL = env.DATABASE_URL || undefined
+export const DB_URL = env.DATABASE_URL || Deno.env.get("DATABASE_URL") || undefined
