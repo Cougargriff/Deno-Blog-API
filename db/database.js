@@ -13,7 +13,7 @@ import {
 class Database {
   constructor() {
     this.connect();
-    console.log("APP_HOST ", APP_HORT)
+    console.log("APP_HOST ", APP_HOST)
     console.log('APP_PORT',  APP_POST)
     console.log("DB_PORT ", DB_PORT)
     console.log('DB_HOST',  DB_HOST)
