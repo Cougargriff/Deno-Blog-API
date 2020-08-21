@@ -6,19 +6,16 @@ export default async ({
   response,
 }) => {
   console.log("Handling createPost ...");
-  const body = await request.body({ type: 'form'});
-  const formData = await body.value.get("content")
-  console.log(formData)
-
+  
+  
   if (!request.hasBody) {
     response.status = 400;
     response.body = { msg: "Invalid post data :(" };
     return;
   }
-
-  const {
-    value: { title, content },
-  } = await request.body();
+  const body = await request.body({ type: 'form'});
+  const content = await body.value.get("content")
+  const title = await body.value.get("title")
 
   if (!title || !content) {
     response.status = 422;
