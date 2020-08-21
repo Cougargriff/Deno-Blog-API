@@ -1,10 +1,12 @@
 import { createPost } from "../services/postService.js";
 
 export default async ({
+  params,
   request,
   response,
 }) => {
   console.log("Handling createPost ...");
+  console.log(params)
 
   if (!request.hasBody) {
     response.status = 400;
