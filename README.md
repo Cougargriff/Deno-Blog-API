@@ -4,6 +4,9 @@
 
 CRUD Markdown Blog posts.
 
+## Viewing Logs on cli
+> heroku logs --tail -a deno-blog-api
+
 ## Directories
 
 ### Controllers
@@ -39,5 +42,5 @@ over the data, etc.
 - [x] Handle get request for posts
 - [x] Handle delete request for post
 - [x] Handle put request for updating post
-- [ ] Deploy it!
-heroku logs --tail -a deno-blog-api
+- [x] Deploy it!
+
