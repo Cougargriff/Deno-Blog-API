@@ -40,3 +40,4 @@ over the data, etc.
 - [x] Handle delete request for post
 - [x] Handle put request for updating post
 - [ ] Deploy it!
+heroku logs --tail -a deno-blog-api
