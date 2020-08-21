@@ -6,7 +6,7 @@ export default async ({
   response,
 }) => {
   console.log("Handling createPost ...");
-  console.log(params)
+  console.log(request.body)
 
   if (!request.hasBody) {
     response.status = 400;
