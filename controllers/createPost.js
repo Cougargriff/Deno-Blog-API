@@ -7,7 +7,7 @@ export default async ({
 }) => {
   console.log("Handling createPost ...");
   const body = await request.body({ type: 'form'});
-  const formData = await body.value
+  const formData = await body.value.get("content")
   console.log(formData)
 
   if (!request.hasBody) {
