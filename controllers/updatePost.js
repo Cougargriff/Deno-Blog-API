@@ -20,9 +20,9 @@ export default async ({
     return;
   }
 
-  const {
-    value: {title, content}
-  } = await request.body()
+  const body = await request.body({ type: 'form'});
+  const content = await body.value.get("content")
+  const title = await body.value.get("title")
 
   await updatePost(postId, {title, content});
   response.body = { msg: "Post updated :)"};
